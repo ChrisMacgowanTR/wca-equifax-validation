@@ -1,0 +1,3134 @@
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Inside: Results::Results()
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 0
+Results - test_failed: 0
+Results - test_no_data: 0
+Results - test_exception: 0
+Results - test_total: 0
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+Process for internal: 2
+Process for internal: 3
+Process for internal: 4
+Process for internal: 5
+Process for internal: 6
+Process for internal: 7
+Process for internal: 8
+Process for internal: 9
+Process for internal: 10
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 0
+Results - test_failed: 0
+Results - test_no_data: 0
+Results - test_exception: 0
+Results - test_total: 0
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+Process for internal: 2
+Process for internal: 3
+Process for internal: 4
+Process for internal: 5
+Process for internal: 6
+Process for internal: 7
+Process for internal: 8
+Process for internal: 9
+Process for internal: 10
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 0
+Results - test_failed: 0
+Results - test_no_data: 0
+Results - test_exception: 0
+Results - test_total: 0
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:06.494475
+File Equifax id: 16373705
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 16373705 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: BRITTON JOHN E ATTORNEY Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:06.841180
+File Equifax id: 7633977
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 7633977 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: GALESBURG CB SALES AND SVC Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:07.294917
+File Equifax id: 52444869
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 52444869 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: NOEL JARAMILLO Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:07.667050
+File Equifax id: 8475161
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 8475161 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: STAPLES CRAIG A ATTY Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:08.028549
+File Equifax id: 3313319
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 3313319 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: FLOWER BOX Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:08.412100
+File Equifax id: 3480918
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 3480918 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: BRIDGE TO HEALTH HEALING ART CENTER Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:08.764846
+File Equifax id: 34023777
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 34023777 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: FORTY NINE TWELVE THAI CUISINE Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:09.127712
+File Equifax id: 6192636
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 6192636 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: BATTERY EXCHANGE Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:09.444955
+File Equifax id: 4405840
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 4405840 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: OHIO COUNTY WATER DISTRICT Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT  troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52291821'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52291821
+db_idvalue: 1bab3f955de34342b3493d1e64304af3
+db_troaid: 1bab3f955de34342b3493d1e64304af3
+db_name_in: INFINITE POTENTIAL ENTERPRISES
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:33:09.803699
+File Equifax id: 53262406
+Db Partition: Equifax_Domestic
+Db id Value Target: 52291821
+Test Failed - file_equifax_id: 53262406 Not Equal db_idvaluetarget: 52291821
+Test Failed - file_canonical_name: DELTA KAPPA GAMMA SOCIETY Not Equal db_name_in: INFINITE POTENTIAL ENTERPRISES
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 0
+Results - test_failed: 20
+Results - test_no_data: 0
+Results - test_exception: 0
+Results - test_total: 20
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:14.746856
+File Equifax id: 16373705
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:15.113266
+File Equifax id: 7633977
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:15.539334
+File Equifax id: 52444869
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:15.897700
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:16.261635
+File Equifax id: 3313319
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:16.648411
+File Equifax id: 3480918
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:17.000426
+File Equifax id: 34023777
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:17.361759
+File Equifax id: 6192636
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:17.724114
+File Equifax id: 4405840
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:39:18.075877
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 0
+Results - test_failed: 0
+Results - test_no_data: 10
+Results - test_exception: 0
+Results - test_total: 10
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '16373705'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 16373705
+db_idvalue: 97bd87328e094ac0a232580f033c3fd8
+db_troaid: 97bd87328e094ac0a232580f033c3fd8
+db_name_in: BRITTON JOHN E ATTORNEY
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:05.411368
+File Equifax id: 16373705
+Db Partition: Equifax_Domestic
+Db id Value Target: 16373705
+Test Successful - file_equifax_id: 16373705 is equal to db_idvaluetarget: 16373705
+Test Successful - file_canonical_name: BRITTON JOHN E ATTORNEY is equal to db_name_in: BRITTON JOHN E ATTORNEY
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '7633977'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 3
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 97df73bf9128480ab8e736a87e3eca6f
+db_troaid: 97df73bf9128480ab8e736a87e3eca6f
+db_name_in: GALESBURG CB. SALES & SVC.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_troaid: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_name_in: Oricorp Mexico S.A. de C.V.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_troaid: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_name_in: Oricorp Mexico
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:05.783306
+File Equifax id: 7633977
+Db Partition: WCA
+Db id Value Target: 7633977
+Test Successful - file_equifax_id: 7633977 is equal to db_idvaluetarget: 7633977
+Test Failed - file_canonical_name: GALESBURG CB SALES AND SVC Not Equal db_name_in: Oricorp Mexico
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52444869'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52444869
+db_idvalue: 75ba6229d08d4977aaab432d2d8147c2
+db_troaid: 75ba6229d08d4977aaab432d2d8147c2
+db_name_in: NOEL JARAMILLO
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:06.148331
+File Equifax id: 52444869
+Db Partition: Equifax_Domestic
+Db id Value Target: 52444869
+Test Successful - file_equifax_id: 52444869 is equal to db_idvaluetarget: 52444869
+Test Successful - file_canonical_name: NOEL JARAMILLO is equal to db_name_in: NOEL JARAMILLO
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '8475161'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:06.595593
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3313319'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3313319
+db_idvalue: 3d16c3e1505e4e819f24762073afd16b
+db_troaid: 3d16c3e1505e4e819f24762073afd16b
+db_name_in: FLOWER BOX
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:06.966756
+File Equifax id: 3313319
+Db Partition: Equifax_Domestic
+Db id Value Target: 3313319
+Test Successful - file_equifax_id: 3313319 is equal to db_idvaluetarget: 3313319
+Test Successful - file_canonical_name: FLOWER BOX is equal to db_name_in: FLOWER BOX
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3480918'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 7
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: b8c5487e474d44db8c636438f2163a9f
+db_troaid: b8c5487e474d44db8c636438f2163a9f
+db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS COMPANY
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOOD CO
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: TRI-STAR INDUSTRIES, INC.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS COMPANY
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: Baldwin Richard
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:07.344738
+File Equifax id: 3480918
+Db Partition: WCA
+Db id Value Target: 3480918
+Test Successful - file_equifax_id: 3480918 is equal to db_idvaluetarget: 3480918
+Test Failed - file_canonical_name: BRIDGE TO HEALTH HEALING ART CENTER Not Equal db_name_in: Baldwin Richard
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '34023777'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 34023777
+db_idvalue: 596ae1a345d14d5680670970ee61d463
+db_troaid: 596ae1a345d14d5680670970ee61d463
+db_name_in: FORTY NINE TWELVE THAI CUISINE
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:07.774480
+File Equifax id: 34023777
+Db Partition: Equifax_Domestic
+Db id Value Target: 34023777
+Test Successful - file_equifax_id: 34023777 is equal to db_idvaluetarget: 34023777
+Test Successful - file_canonical_name: FORTY NINE TWELVE THAI CUISINE is equal to db_name_in: FORTY NINE TWELVE THAI CUISINE
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '6192636'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 5
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: BATTERY EXCHANGE
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: JOHNS AUTO CLINIC
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Programma Dinamico
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Programma Dinamico S.p.A.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Program Dinamico
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:08.151333
+File Equifax id: 6192636
+Db Partition: WCA
+Db id Value Target: 6192636
+Test Successful - file_equifax_id: 6192636 is equal to db_idvaluetarget: 6192636
+Test Failed - file_canonical_name: BATTERY EXCHANGE Not Equal db_name_in: Program Dinamico
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '4405840'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 4405840
+db_idvalue: 60080cb506484e3089fca869fb357605
+db_troaid: 60080cb506484e3089fca869fb357605
+db_name_in: OHIO COUNTY WATER DISTRICT
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:08.585698
+File Equifax id: 4405840
+Db Partition: Equifax_Domestic
+Db id Value Target: 4405840
+Test Successful - file_equifax_id: 4405840 is equal to db_idvaluetarget: 4405840
+Test Successful - file_canonical_name: OHIO COUNTY WATER DISTRICT is equal to db_name_in: OHIO COUNTY WATER DISTRICT
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '53262406'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:41:08.947038
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 13
+Results - test_failed: 3
+Results - test_no_data: 2
+Results - test_exception: 0
+Results - test_total: 18
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '16373705'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 16373705
+db_idvalue: 97bd87328e094ac0a232580f033c3fd8
+db_troaid: 97bd87328e094ac0a232580f033c3fd8
+db_name_in: BRITTON JOHN E ATTORNEY
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:49.708615
+File Equifax id: 16373705
+Db Partition: Equifax_Domestic
+Db id Value Target: 16373705
+Test Successful - file_equifax_id: 16373705 is equal to db_idvaluetarget: 16373705
+Test Successful - file_canonical_name: BRITTON JOHN E ATTORNEY is equal to db_name_in: BRITTON JOHN E ATTORNEY
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '7633977'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 3
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 97df73bf9128480ab8e736a87e3eca6f
+db_troaid: 97df73bf9128480ab8e736a87e3eca6f
+db_name_in: GALESBURG CB. SALES & SVC.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_troaid: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_name_in: Oricorp Mexico S.A. de C.V.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_troaid: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_name_in: Oricorp Mexico
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:50.065026
+File Equifax id: 7633977
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52444869'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52444869
+db_idvalue: 75ba6229d08d4977aaab432d2d8147c2
+db_troaid: 75ba6229d08d4977aaab432d2d8147c2
+db_name_in: NOEL JARAMILLO
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:50.418866
+File Equifax id: 52444869
+Db Partition: Equifax_Domestic
+Db id Value Target: 52444869
+Test Successful - file_equifax_id: 52444869 is equal to db_idvaluetarget: 52444869
+Test Successful - file_canonical_name: NOEL JARAMILLO is equal to db_name_in: NOEL JARAMILLO
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '8475161'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:50.851840
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3313319'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3313319
+db_idvalue: 3d16c3e1505e4e819f24762073afd16b
+db_troaid: 3d16c3e1505e4e819f24762073afd16b
+db_name_in: FLOWER BOX
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:51.208302
+File Equifax id: 3313319
+Db Partition: Equifax_Domestic
+Db id Value Target: 3313319
+Test Successful - file_equifax_id: 3313319 is equal to db_idvaluetarget: 3313319
+Test Successful - file_canonical_name: FLOWER BOX is equal to db_name_in: FLOWER BOX
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3480918'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 7
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: b8c5487e474d44db8c636438f2163a9f
+db_troaid: b8c5487e474d44db8c636438f2163a9f
+db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS COMPANY
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOOD CO
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: TRI-STAR INDUSTRIES, INC.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS COMPANY
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: Baldwin Richard
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:51.569846
+File Equifax id: 3480918
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '34023777'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 34023777
+db_idvalue: 596ae1a345d14d5680670970ee61d463
+db_troaid: 596ae1a345d14d5680670970ee61d463
+db_name_in: FORTY NINE TWELVE THAI CUISINE
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:51.989465
+File Equifax id: 34023777
+Db Partition: Equifax_Domestic
+Db id Value Target: 34023777
+Test Successful - file_equifax_id: 34023777 is equal to db_idvaluetarget: 34023777
+Test Successful - file_canonical_name: FORTY NINE TWELVE THAI CUISINE is equal to db_name_in: FORTY NINE TWELVE THAI CUISINE
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '6192636'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 5
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: BATTERY EXCHANGE
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: JOHNS AUTO CLINIC
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Programma Dinamico
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Programma Dinamico S.p.A.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Program Dinamico
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:52.352204
+File Equifax id: 6192636
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '4405840'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 4405840
+db_idvalue: 60080cb506484e3089fca869fb357605
+db_troaid: 60080cb506484e3089fca869fb357605
+db_name_in: OHIO COUNTY WATER DISTRICT
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:52.705939
+File Equifax id: 4405840
+Db Partition: Equifax_Domestic
+Db id Value Target: 4405840
+Test Successful - file_equifax_id: 4405840 is equal to db_idvaluetarget: 4405840
+Test Successful - file_canonical_name: OHIO COUNTY WATER DISTRICT is equal to db_name_in: OHIO COUNTY WATER DISTRICT
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '53262406'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-23 16:47:53.052702
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 10
+Results - test_failed: 0
+Results - test_no_data: 5
+Results - test_exception: 0
+Results - test_total: 15
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '16373705'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 16373705
+db_idvalue: 97bd87328e094ac0a232580f033c3fd8
+db_troaid: 97bd87328e094ac0a232580f033c3fd8
+db_name_in: BRITTON JOHN E ATTORNEY
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 09:59:57.781566
+File Equifax id: 16373705
+Db Partition: Equifax_Domestic
+Db id Value Target: 16373705
+Test Successful - file_equifax_id: 16373705 is equal to db_idvaluetarget: 16373705
+Test Successful - file_canonical_name: BRITTON JOHN E ATTORNEY is equal to db_name_in: BRITTON JOHN E ATTORNEY
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '7633977'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 3
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 97df73bf9128480ab8e736a87e3eca6f
+db_troaid: 97df73bf9128480ab8e736a87e3eca6f
+db_name_in: GALESBURG CB. SALES & SVC.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_troaid: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_name_in: Oricorp Mexico S.A. de C.V.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_troaid: 4b0f2a8d410e4fa8aba9bfddad87a41a
+db_name_in: Oricorp Mexico
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 09:59:58.132581
+File Equifax id: 7633977
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52444869'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52444869
+db_idvalue: 75ba6229d08d4977aaab432d2d8147c2
+db_troaid: 75ba6229d08d4977aaab432d2d8147c2
+db_name_in: NOEL JARAMILLO
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 09:59:58.491605
+File Equifax id: 52444869
+Db Partition: Equifax_Domestic
+Db id Value Target: 52444869
+Test Successful - file_equifax_id: 52444869 is equal to db_idvaluetarget: 52444869
+Test Successful - file_canonical_name: NOEL JARAMILLO is equal to db_name_in: NOEL JARAMILLO
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '8475161'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 09:59:58.910629
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3313319'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3313319
+db_idvalue: 3d16c3e1505e4e819f24762073afd16b
+db_troaid: 3d16c3e1505e4e819f24762073afd16b
+db_name_in: FLOWER BOX
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 09:59:59.265952
+File Equifax id: 3313319
+Db Partition: Equifax_Domestic
+Db id Value Target: 3313319
+Test Successful - file_equifax_id: 3313319 is equal to db_idvaluetarget: 3313319
+Test Successful - file_canonical_name: FLOWER BOX is equal to db_name_in: FLOWER BOX
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3480918'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 7
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: b8c5487e474d44db8c636438f2163a9f
+db_troaid: b8c5487e474d44db8c636438f2163a9f
+db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS COMPANY
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOOD CO
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: TRI-STAR INDUSTRIES, INC.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: BALDWIN RICHARDSON FOODS COMPANY
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: f839dad2ed934c71a7670551dcf55da1
+db_troaid: f839dad2ed934c71a7670551dcf55da1
+db_name_in: Baldwin Richard
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 09:59:59.635048
+File Equifax id: 3480918
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '34023777'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 34023777
+db_idvalue: 596ae1a345d14d5680670970ee61d463
+db_troaid: 596ae1a345d14d5680670970ee61d463
+db_name_in: FORTY NINE TWELVE THAI CUISINE
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:00:00.059010
+File Equifax id: 34023777
+Db Partition: Equifax_Domestic
+Db id Value Target: 34023777
+Test Successful - file_equifax_id: 34023777 is equal to db_idvaluetarget: 34023777
+Test Successful - file_canonical_name: FORTY NINE TWELVE THAI CUISINE is equal to db_name_in: FORTY NINE TWELVE THAI CUISINE
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '6192636'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 5
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: BATTERY EXCHANGE
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: JOHNS AUTO CLINIC
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Programma Dinamico
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Programma Dinamico S.p.A.
+db_partition: WCA
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: ae3de222b6e146dbbc4e843bed89b351
+db_troaid: ae3de222b6e146dbbc4e843bed89b351
+db_name_in: Program Dinamico
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:00:00.430521
+File Equifax id: 6192636
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '4405840'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 4405840
+db_idvalue: 60080cb506484e3089fca869fb357605
+db_troaid: 60080cb506484e3089fca869fb357605
+db_name_in: OHIO COUNTY WATER DISTRICT
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:00:00.792167
+File Equifax id: 4405840
+Db Partition: Equifax_Domestic
+Db id Value Target: 4405840
+Test Successful - file_equifax_id: 4405840 is equal to db_idvaluetarget: 4405840
+Test Successful - file_canonical_name: OHIO COUNTY WATER DISTRICT is equal to db_name_in: OHIO COUNTY WATER DISTRICT
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '53262406'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:00:01.103169
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 10
+Results - test_failed: 0
+Results - test_no_data: 5
+Results - test_exception: 0
+Results - test_total: 15
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '16373705' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 16373705
+db_idvalue: 97bd87328e094ac0a232580f033c3fd8
+db_troaid: 97bd87328e094ac0a232580f033c3fd8
+db_name_in: BRITTON JOHN E ATTORNEY
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:47.367357
+File Equifax id: 16373705
+Db Partition: Equifax_Domestic
+Db id Value Target: 16373705
+Test Successful - file_equifax_id: 16373705 is equal to db_idvaluetarget: 16373705
+Test Successful - file_canonical_name: BRITTON JOHN E ATTORNEY is equal to db_name_in: BRITTON JOHN E ATTORNEY
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '7633977' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 97df73bf9128480ab8e736a87e3eca6f
+db_troaid: 97df73bf9128480ab8e736a87e3eca6f
+db_name_in: GALESBURG CB. SALES & SVC.
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:47.724468
+File Equifax id: 7633977
+Db Partition: Equifax_Domestic
+Db id Value Target: 7633977
+Test Successful - file_equifax_id: 7633977 is equal to db_idvaluetarget: 7633977
+Test Failed - file_canonical_name: GALESBURG CB SALES AND SVC Not Equal db_name_in: GALESBURG CB. SALES & SVC.
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52444869' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52444869
+db_idvalue: 75ba6229d08d4977aaab432d2d8147c2
+db_troaid: 75ba6229d08d4977aaab432d2d8147c2
+db_name_in: NOEL JARAMILLO
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:48.110208
+File Equifax id: 52444869
+Db Partition: Equifax_Domestic
+Db id Value Target: 52444869
+Test Successful - file_equifax_id: 52444869 is equal to db_idvaluetarget: 52444869
+Test Successful - file_canonical_name: NOEL JARAMILLO is equal to db_name_in: NOEL JARAMILLO
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '8475161' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:48.466091
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3313319' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3313319
+db_idvalue: 3d16c3e1505e4e819f24762073afd16b
+db_troaid: 3d16c3e1505e4e819f24762073afd16b
+db_name_in: FLOWER BOX
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:48.818099
+File Equifax id: 3313319
+Db Partition: Equifax_Domestic
+Db id Value Target: 3313319
+Test Successful - file_equifax_id: 3313319 is equal to db_idvaluetarget: 3313319
+Test Successful - file_canonical_name: FLOWER BOX is equal to db_name_in: FLOWER BOX
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3480918' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: b8c5487e474d44db8c636438f2163a9f
+db_troaid: b8c5487e474d44db8c636438f2163a9f
+db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:49.131007
+File Equifax id: 3480918
+Db Partition: Equifax_Domestic
+Db id Value Target: 3480918
+Test Successful - file_equifax_id: 3480918 is equal to db_idvaluetarget: 3480918
+Test Successful - file_canonical_name: BRIDGE TO HEALTH HEALING ART CENTER is equal to db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '34023777' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 34023777
+db_idvalue: 596ae1a345d14d5680670970ee61d463
+db_troaid: 596ae1a345d14d5680670970ee61d463
+db_name_in: FORTY NINE TWELVE THAI CUISINE
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:49.481073
+File Equifax id: 34023777
+Db Partition: Equifax_Domestic
+Db id Value Target: 34023777
+Test Successful - file_equifax_id: 34023777 is equal to db_idvaluetarget: 34023777
+Test Successful - file_canonical_name: FORTY NINE TWELVE THAI CUISINE is equal to db_name_in: FORTY NINE TWELVE THAI CUISINE
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '6192636' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor returned more than one results
+Row count: 2
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: BATTERY EXCHANGE
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: JOHNS AUTO CLINIC
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:49.831187
+File Equifax id: 6192636
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '4405840' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 4405840
+db_idvalue: 60080cb506484e3089fca869fb357605
+db_troaid: 60080cb506484e3089fca869fb357605
+db_name_in: OHIO COUNTY WATER DISTRICT
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:50.146305
+File Equifax id: 4405840
+Db Partition: Equifax_Domestic
+Db id Value Target: 4405840
+Test Successful - file_equifax_id: 4405840 is equal to db_idvaluetarget: 4405840
+Test Successful - file_canonical_name: OHIO COUNTY WATER DISTRICT is equal to db_name_in: OHIO COUNTY WATER DISTRICT
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '53262406' AND troa_dev.idmap.partition = 'Equifax_Domestic'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:38:50.504565
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 13
+Results - test_failed: 1
+Results - test_no_data: 3
+Results - test_exception: 0
+Results - test_total: 17
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '16373705' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:28.578827
+File Equifax id: 16373705
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '7633977' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:28.926866
+File Equifax id: 7633977
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52444869' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:29.356015
+File Equifax id: 52444869
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '8475161' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:29.703998
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3313319' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:30.057149
+File Equifax id: 3313319
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3480918' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:30.476979
+File Equifax id: 3480918
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '34023777' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:30.831449
+File Equifax id: 34023777
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '6192636' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: BATTERY EXCHANGE
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:31.185433
+File Equifax id: 6192636
+Db Partition: Equifax_Domestic
+Db id Value Target: 6192636
+Test Successful - file_equifax_id: 6192636 is equal to db_idvaluetarget: 6192636
+Test Successful - file_canonical_name: BATTERY EXCHANGE is equal to db_name_in: BATTERY EXCHANGE
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '4405840' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:31.531919
+File Equifax id: 4405840
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '53262406' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Official'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:48:31.879646
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 2
+Results - test_failed: 0
+Results - test_no_data: 9
+Results - test_exception: 0
+Results - test_total: 11
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Starting postgresql-connect
+Set input source
+Source file: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv
+Read the input file using pandas
+Inside: Results::Results()
+Inside: DbOrganizationName::DbOrganizationName()
+internal_count: 0
+internal_set: 1
+Process for internal: 1
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29826932
+Data: file_canonical_name_array: BRITTON JOHN E ATTORNEY
+Data: file_equifax_id_array: 16373705
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '16373705' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 16373705
+db_idvalue: 97bd87328e094ac0a232580f033c3fd8
+db_troaid: 97bd87328e094ac0a232580f033c3fd8
+db_name_in: BRITTON JOHN E ATTORNEY
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:30.171629
+File Equifax id: 16373705
+Db Partition: Equifax_Domestic
+Db id Value Target: 16373705
+Test Successful - file_equifax_id: 16373705 is equal to db_idvaluetarget: 16373705
+Test Successful - file_canonical_name: BRITTON JOHN E ATTORNEY is equal to db_name_in: BRITTON JOHN E ATTORNEY
+Process for internal: 2
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29779525
+Data: file_canonical_name_array: GALESBURG CB SALES AND SVC
+Data: file_equifax_id_array: 7633977
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '7633977' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 7633977
+db_idvalue: 97df73bf9128480ab8e736a87e3eca6f
+db_troaid: 97df73bf9128480ab8e736a87e3eca6f
+db_name_in: GALESBURG CB. SALES & SVC.
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:30.553689
+File Equifax id: 7633977
+Db Partition: Equifax_Domestic
+Db id Value Target: 7633977
+Test Successful - file_equifax_id: 7633977 is equal to db_idvaluetarget: 7633977
+Test Failed - file_canonical_name: GALESBURG CB SALES AND SVC Not Equal db_name_in: GALESBURG CB. SALES & SVC.
+Process for internal: 3
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30172577
+Data: file_canonical_name_array: NOEL JARAMILLO
+Data: file_equifax_id_array: 52444869
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '52444869' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 52444869
+db_idvalue: 75ba6229d08d4977aaab432d2d8147c2
+db_troaid: 75ba6229d08d4977aaab432d2d8147c2
+db_name_in: NOEL JARAMILLO
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:30.904714
+File Equifax id: 52444869
+Db Partition: Equifax_Domestic
+Db id Value Target: 52444869
+Test Successful - file_equifax_id: 52444869 is equal to db_idvaluetarget: 52444869
+Test Successful - file_canonical_name: NOEL JARAMILLO is equal to db_name_in: NOEL JARAMILLO
+Process for internal: 4
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29781624
+Data: file_canonical_name_array: STAPLES CRAIG A ATTY
+Data: file_equifax_id_array: 8475161
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '8475161' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:31.251946
+File Equifax id: 8475161
+Process for internal: 5
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30336612
+Data: file_canonical_name_array: FLOWER BOX
+Data: file_equifax_id_array: 3313319
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3313319' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3313319
+db_idvalue: 3d16c3e1505e4e819f24762073afd16b
+db_troaid: 3d16c3e1505e4e819f24762073afd16b
+db_name_in: FLOWER BOX
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:31.598922
+File Equifax id: 3313319
+Db Partition: Equifax_Domestic
+Db id Value Target: 3313319
+Test Successful - file_equifax_id: 3313319 is equal to db_idvaluetarget: 3313319
+Test Successful - file_canonical_name: FLOWER BOX is equal to db_name_in: FLOWER BOX
+Process for internal: 6
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 29674160
+Data: file_canonical_name_array: BRIDGE TO HEALTH HEALING ART CENTER
+Data: file_equifax_id_array: 3480918
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '3480918' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 3480918
+db_idvalue: b8c5487e474d44db8c636438f2163a9f
+db_troaid: b8c5487e474d44db8c636438f2163a9f
+db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:31.960603
+File Equifax id: 3480918
+Db Partition: Equifax_Domestic
+Db id Value Target: 3480918
+Test Successful - file_equifax_id: 3480918 is equal to db_idvaluetarget: 3480918
+Test Successful - file_canonical_name: BRIDGE TO HEALTH HEALING ART CENTER is equal to db_name_in: BRIDGE TO HEALTH HEALING ART CENTER
+Process for internal: 7
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30038681
+Data: file_canonical_name_array: FORTY NINE TWELVE THAI CUISINE
+Data: file_equifax_id_array: 34023777
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '34023777' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 34023777
+db_idvalue: 596ae1a345d14d5680670970ee61d463
+db_troaid: 596ae1a345d14d5680670970ee61d463
+db_name_in: FORTY NINE TWELVE THAI CUISINE
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:32.382949
+File Equifax id: 34023777
+Db Partition: Equifax_Domestic
+Db id Value Target: 34023777
+Test Successful - file_equifax_id: 34023777 is equal to db_idvaluetarget: 34023777
+Test Successful - file_canonical_name: FORTY NINE TWELVE THAI CUISINE is equal to db_name_in: FORTY NINE TWELVE THAI CUISINE
+Process for internal: 8
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30337284
+Data: file_canonical_name_array: BATTERY EXCHANGE
+Data: file_equifax_id_array: 6192636
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '6192636' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 6192636
+db_idvalue: bba6db086ab14892a6dcc9c904396ead
+db_troaid: bba6db086ab14892a6dcc9c904396ead
+db_name_in: JOHNS AUTO CLINIC
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:32.740666
+File Equifax id: 6192636
+Db Partition: Equifax_Domestic
+Db id Value Target: 6192636
+Test Successful - file_equifax_id: 6192636 is equal to db_idvaluetarget: 6192636
+Test Failed - file_canonical_name: BATTERY EXCHANGE Not Equal db_name_in: JOHNS AUTO CLINIC
+Process for internal: 9
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 30349765
+Data: file_canonical_name_array: OHIO COUNTY WATER DISTRICT
+Data: file_equifax_id_array: 4405840
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '4405840' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Row count: 1
+Print each row and it's columns values
+db_partition: Equifax_Domestic
+db_idtype: troaid
+db_idvaluetarget: 4405840
+db_idvalue: 60080cb506484e3089fca869fb357605
+db_troaid: 60080cb506484e3089fca869fb357605
+db_name_in: OHIO COUNTY WATER DISTRICT
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:33.096190
+File Equifax id: 4405840
+Db Partition: Equifax_Domestic
+Db id Value Target: 4405840
+Test Successful - file_equifax_id: 4405840 is equal to db_idvaluetarget: 4405840
+Test Successful - file_canonical_name: OHIO COUNTY WATER DISTRICT is equal to db_name_in: OHIO COUNTY WATER DISTRICT
+Process for internal: 10
+------------------------------------------------------------
+Inside: DbOrganizationName::validation()
+File data:
+Data: file_company_id_array: 28417248
+Data: file_canonical_name_array: DELTA KAPPA GAMMA SOCIETY
+Data: file_equifax_id_array: 53262406
+Attempting to connect to the database
+Connection was successful
+Cursor was created successfully
+SQL string: SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '53262406' AND troa_dev.idmap.partition = 'Equifax_Domestic' AND troa_dev.organization_name.nametype = 'Doing Business As'
+Execute the cursor
+Selecting rows from mobile table using cursor.fetchall
+Cursor is empty
+Cursor returned more than one results
+Row count: 0
+Print each row and it's columns values
+Close the database connection
+************************
+** TEST RESULTS ********
+************************
+No record were found matching the query
+Test Class: DbOrganizationName
+Test Method: validation()
+Target Database: troa_dev.organization_name
+Report Datetime:  2019-10-24 10:49:33.512566
+File Equifax id: 53262406
+Print columns: Index(['COMPANY_ID', 'CANONICAL_NAME', 'EQUIFAX_ID'], dtype='object')
+Data - pipe_company_id_array : 30172671
+Print - pipe_canonical_name_array: INFINITE POTENTIAL ENTERPRISES
+Print - pipe_equifax_id_array: 52291821
+Attempting to connect o the database
+Connection was successful
+Selecting rows from mobile table using cursor.fetchall
+Print each row and it's columns values
+partition = Equifax_Domestic
+partitionid = 52
+addresstype  = NORTHEAST UTILITIES
+streetaddress1  = Doing Business As
+ 
+********************************************************************************
+**** TEST RESULTS **************************************************************
+********************************************************************************
+Calling test class: results
+Results - test_passed: 14
+Results - test_failed: 2
+Results - test_no_data: 2
+Results - test_exception: 0
+Results - test_total: 18
+ 
+ 
+The end if near!
+blue-dog Ingest Validation Utility
+The application is stopping
+Have a nice day
