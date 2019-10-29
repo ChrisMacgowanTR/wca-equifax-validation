@@ -14,7 +14,7 @@
 # The Equifax consists of some ~54 million rows - and we are pulling 20, so that is about a
 # %0.00003704 sample size.
 #
-
+import datetime
 import logging
 import sys
 import traceback
@@ -26,12 +26,12 @@ import db_organization_name as module_db_organization_name
 
 import pandas as pd
 
-file_handler = logging.FileHandler(filename='blue_dog.log')
+file_handler = logging.FileHandler(filename='wca_equifax_validation.log')
 stdout_handler = logging.StreamHandler(sys.stdout)
 handlers = [file_handler, stdout_handler]
 
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format='%(message)s',
     handlers=handlers
 )
@@ -41,19 +41,48 @@ logging.info('The application is starting')
 logging.debug("Starting postgresql-connect")
 logging.debug("Set input source")
 
+# Test Header Variables
+report_title = 'Acorn Ingest Validation - WCA Validation'
+report_sub_title = 'Ingest Testing Equifax - Full'
+report_author = 'Chris Macgowan'
+return_datetime = datetime.datetime.today()
+report_tool_name = 'wcs-equifax-validation.py'
+report_source_total_rows = 249999
+report_source_sample_rows = 0
+
+report_description = 'A sample file was created with data from the source file.The validation tool was used to ' \
+                     'read data from the test file and validate data against the database / table. '
+
 # Input file options
 
 # Full original file
 # UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc9 in position 37: invalid continuation byte
-source_file = 'C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13.csv'
+# source_file = 'C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13.csv'
 
-# Test oo version
-source_file = 'C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//WCA_EQUIFAX_split_13__test00.csv'
+# Source file and path
+source_filename = 'WCA_EQUIFAX_split_13_test01.csv'
+source_path = 'C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//'
+source_file = f"{source_path}{source_filename}"
 
-
-logging.debug("Source file: %s", source_file)
+logging.debug("Source file: %s", source_filename)
+logging.debug("Source path: %s", source_path)
 logging.debug("Read the input file using pandas")
 pipe_data = pd.read_csv(source_file, sep=',')
+
+# just get the row count of the file
+with open(source_file) as f:
+    for i, l in enumerate(f):
+        pass
+
+report_source_sample_rows = i + 1
+
+
+lines = 0
+for line in open(source_file):
+    lines += 1
+
+report_source_sample_rows = lines
+
 
 # Here is the plan
 # We will iterate the file able and we will then process a selected number
@@ -125,6 +154,32 @@ except Exception as err:
   # print Exception, err
   traceback.print_tb(err.__traceback__)
 
+
+logging.info(' ')
+logging.info("********************************************************************************")
+logging.info("**** TEST HEADER ***************************************************************")
+logging.info("********************************************************************************")
+logging.info(' ')
+logging.info("Report Title: %s", report_title)
+logging.info("Report Subtitle: %s", report_sub_title)
+logging.info("Test Results")
+logging.info(' ')
+logging.info("Author: %s", report_author)
+logging.info("Report Date: %s", return_datetime)
+logging.info(' ')
+logging.info("Source Filename: %s", source_filename)
+logging.info("Source Path: %s", source_path)
+logging.info(' ')
+logging.info("Validation Application: %s", report_tool_name)
+logging.info("Source File Size (rows): %d", report_source_total_rows)
+logging.info("Source File Sample Size (rows): %d", report_source_sample_rows)
+logging.info(' ')
+logging.info('Description:')
+logging.info(' ')
+logging.info("%s", report_description)
+logging.info(' ')
+
+logging.info(' ')
 logging.info(' ')
 logging.info("********************************************************************************")
 logging.info("**** TEST RESULTS **************************************************************")

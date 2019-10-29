@@ -1,0 +1,76 @@
+ 
+Report Title: Acorn Ingest Validation - WCA Validation
+Report Subtitle: Ingest Testing WCA Equifax - Full
+ 
+Author: Chris Macgowan
+Report Date: 2019-10-29 15:37:35.569174
+ 
+Source Filename: WCA_EQUIFAX_split_13_test01.csv
+Source Path: C://macgowan//projects//qa//ingest_test_20191009//data//wca//full//wca_equifaxid//
+ 
+Validation Application: wcs-equifax-validation.py
+Source File Size (rows): 249999
+Source File Sample Size (rows): 51
+ 
+Description:
+ 
+A sample file was created with data from the source file.The validation tool was used to read data from the test file and validate data against the database / table. 
+
+Errors related to normalization have been removed.
+For Example: 
+Test Failed - file_canonical_name: GALESBURG CB SALES AND SVC Not Equal db_name_in: GALESBURG CB. SALES & SVC.
+Test Failed - file_canonical_name: HEALTHY RESULTS INC Not Equal db_name_in: HEALTHY RESULTS, INC
+Test Failed - file_canonical_name: WERNERS UPHOLSTERING Not Equal db_name_in: WERNER'S UPHOLSTERING
+
+Acorn Ingest Validation - WCA Equifax Validation
+The application is starting
+Inside: Results::Results()
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 8475161
+Db Partition: 
+Test Failed - No record were found matching the query
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 6192636
+Db Partition: Equifax_Domestic
+Test Failed - file_canonical_name: BATTERY EXCHANGE Not Equal db_name_in: JOHNS AUTO CLINIC
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 53262406
+Db Partition: 
+Test Failed - No record were found matching the query
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 87489577
+Db Partition: 
+Test Failed - No record were found matching the query
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 87489552
+Db Partition: 
+Test Failed - No record were found matching the query
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 102590887
+Db Partition: 
+Test Failed - No record were found matching the query
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 102549805
+Db Partition: 
+Test Failed - No record were found matching the query
+------------------------------------------------------------
+Test Result
+Test: FAIL
+File Equifax id: 102582695
+Db Partition: 
+Test Failed - No record were found matching the query
+ 

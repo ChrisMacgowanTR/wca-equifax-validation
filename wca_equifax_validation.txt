@@ -1,0 +1,236 @@
+
+The Blue Dog Application
+Ingest Data Validation Utility
+Technical Document
+Chris Macgowan
+09 Oct 2019
+blue_dog.txt
+
+Description: 
+
+This is the famous technical documentation. 
+This should probablu be loacted in the reead.md filel 
+Maybe someday 
+
+-----------------------------------------------------------------------------
+Overview
+
+This is add will help with ingest data validation. It will be used to read the
+input file that was used during the ingest process. We will parse the input
+and then we will compare the data to the data in the database.
+
+When testing against a sample of Equifax data we are are only selecting a sample size of 15-20 records.
+typically we will pull from the top, middle and end of the data set in a random and unified manner.
+The Equifax consists of some ~54 million rows - and we are pulling 20, so that is about a
+%0.00003704 sample size.
+
+
+-----------------------------------------------------------------------------
+SQL Notes 
+
+Below are some random queries that we used during development testing of the data. 
+
+SELECT partition, idtype, idvalue, idtypetarget, idvaluetarget, status, hashvalue, systemtrackingid, systemtrackingdate, filepath
+    FROM troa_dev.idmap;
+    
+Select DISTINCT partition, idtype, idtypetarget FROM troa_dev.idmap
+    
+SELECT * FROM troa_dev.idmap
+ORDER BY partition ASC, idtype ASC, idvalue ASC, idtypetarget ASC, idvaluetarget ASC LIMIT 100
+    
+SELECT * FROM troa_dev.organization_sic 
+where partitionid = '53' AND partition = 'Equifax_Domestic' 
+
+SELECT * FROM troa_dev.organization_naics
+where partitionid = '18847931' AND partition = 'Equifax_Domestic' 
+
+SELECT * FROM troa_dev.organization_sic
+ORDER BY sourceid ASC, sourceidtype ASC, sicorder ASC LIMIT 100 
+
+
+-----------------------------------------------------------------------------
+SQL Notes (Version 2)
+
+The SQL notes below are being used to attempt to detemine why there is not matching data in the idmap table as was dicussed in chapter 23 of the reading from last night. Do you remmeber thhose days when you have some reading to do and then you didid not get it done and hten you have a test and the test was like A-OK !!!! 
+
+***
+
+SELECT partition, idtype, idvalue, idtypetarget, idvaluetarget, status, hashvalue, systemtrackingid, systemtrackingdate, filepath
+    FROM troa_dev_archive.idmap;
+    
+Select DISTINCT partition, idtype, idtypetarget FROM troa_dev_archive.idmap
+
+-- The Last CUT ---> 
+
+SELECT troa_dev_archive.idmap.partition, 
+       troa_dev_archive.idmap.idtype, 
+       troa_dev_archive.idmap.idvaluetarget, 
+       troa_dev_archive.idmap.idvalue, 
+       troa_dev_archive.organization_name.troaid, 
+       troa_dev_archive.organization_name.name,
+       troa_dev_archive.organization_name.nametype
+FROM troa_dev_archive.idmap
+INNER JOIN troa_dev_archive.organization_name ON troa_dev_archive.idmap.idvalue = troa_dev_archive.organization_name.troaid
+WHERE troa_dev_archive.idmap.idvaluetarget = '7633977'
+AND troa_dev_archive.idmap.partition = 'WCA'
+AND troa_dev_archive.organization_name.nametype = 'Official'
+
+SELECT troa_dev_archive.idmap.partition, 
+       troa_dev_archive.idmap.idtype, 
+       troa_dev_archive.idmap.idvaluetarget, 
+       troa_dev_archive.idmap.idvalue, 
+       troa_dev_archive.organization_name.troaid, 
+       troa_dev_archive.organization_name.name
+FROM troa_dev_archive.idmap
+INNER JOIN troa_dev_archive.organization_name ON troa_dev_archive.idmap.idvalue = troa_dev_archive.organization_name.troaid
+WHERE troa_dev_archive.idmap.idvaluetarget = '52291821'
+
+SELECT partition, idtype, idvalue, idtypetarget, idvaluetarget, status, hashvalue, systemtrackingid, systemtrackingdate, filepath
+    FROM troa_dev_archive.idmap;
+    
+Select DISTINCT partition, idtype, idtypetarget FROM troa_dev_archive.idmap
+
+Select DISTINCT idtypetarget, partition, idtype FROM troa_dev_archive.idmap
+where partition = 'WCA'
+    
+SELECT * FROM troa_dev_archive.idmap
+ORDER BY partition ASC, idtype ASC, idvalue ASC, idtypetarget ASC, idvaluetarget ASC LIMIT 100
+
+-- //////////////////////////////////////////////////////////////////////
+-- Testing WCA_EQUIFAX_split_13.csv
+-- Looking for the data in the map
+-- Use this data to map to troa_dev_archive.organization_name
+-- EQUIFAX_ID, 52291821 found
+-- COMPANY_ID, 30172671 NOT found
+SELECT * FROM troa_dev_archive.idmap
+where idvaluetarget = '102579415' 
+
+-- Get name using troaid from above
+SELECT * FROM troa_dev_archive.organization_name
+where troaid = '7f4f2caa353c439784a5651c09ecbb6d'
+
+-- from idmap 
+partition, idtype, idvaluetarget, idvalue
+
+-- From name table 
+troaid, name
+
+-- Using a Join 
+
+SELECT troa_dev_archive.idmap.partition, 
+       troa_dev_archive.idmap.idtype, 
+       troa_dev_archive.idmap.idvaluetarget, 
+       troa_dev_archive.idmap.idvalue, 
+       troa_dev_archive.organization_name.troaid, 
+       troa_dev_archive.organization_name.name
+FROM troa_dev_archive.idmap
+INNER JOIN troa_dev_archive.organization_name ON Orders.CustomerID=Customers.CustomerID
+WHERE 
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
+
+-- Test 
+SELECT * FROM troa_dev_archive.organization_name
+ORDER BY partition ASC, partitionid ASC, name ASC, nametype ASC LIMIT 100
+    
+SELECT * FROM troa_dev_archive.organization_sic 
+where partitionid = '53' AND partition = 'Equifax_Domestic' 
+
+SELECT * FROM troa_dev_archive.organization_naics
+where partitionid = '18847931' AND partition = 'Equifax_Domestic' 
+
+SELECT * FROM troa_dev_archive.organization_sic
+ORDER BY sourceid ASC, sourceidtype ASC, sicorder ASC LIMIT 100 
+
+
+-- //////////////////////////////////////////////////////////////////////
+-- Testing GUID_data_split-xxx.csv
+-- "COMPANY_ID","COMPANY_NAME","GUID"
+-- "8711421","PLUMBHEAT LTD","IDA497940608511E089AC8CE04EA54993"
+-- "8693426","UNION PACIFIC RAILROAD CO.","IB133871066DB11E080258F0E01953BF2"
+-- "8692413","ACCESS ARTICLES DE CUIR MAGASINS","I2F211910608511E080258F0E01953BF2"
+
+-- WCA mapping to TROA.xlsx
+-- ID MAP:  idmap.idtype = "wcaid";
+-- idmap.idvalue = value of company.id above value; 
+-- idmap.idtypetarget = "oanovus_guid";
+-- idmap.idvaluetarget = value of guid and
+-- idmap.idtype = "troaid";
+-- idmap.idvalue = troaid retrieved in match/map above;     
+-- idmap.idtypetarget = "oanovus_guid";
+-- idmap.idvaluetarget = value of guid
+
+-- Only troaid returned
+SELECT DISTINCT idtype FROM troa_dev_archive.idmap
+WHERE idtype = 'wcaid'
+
+-- No Data returned
+SELECT * FROM troa_dev_archive.idmap
+WHERE idtypetarget = 'oanovus_guid'
+
+
+-- No data returned
+SELECT * FROM troa_dev_archive.idmap
+WHERE idvalue = '8692413'
+
+-- No Date 
+SELECT * FROM troa_dev_archive.idmap
+WHERE idvaluetarget = '8711421'
+
+-- No Data 
+SELECT * FROM troa_dev_archive.idmap
+WHERE idvaluetarget = 'IDA497940608511E089AC8CE04EA54993'
+
+
+-- /////////////////////////////////////
+-- NAICS_DATA_SPLIT_xx.csv
+-- 
+
+-- "COMPANY_ID","NAICS_CODE","NAICS_DESCRIPTION","IS_PRIMARY_NAICS"
+-- "41945319","523920","Portfolio Management","NO"
+-- "41945319","523930","Investment Advice","NO"
+-- "41945319","523999","Miscellaneous Financial Investment Activities","YES"
+
+-- WCA mapping to TROA.xlsx
+-- goes into organization_naics: 
+-- - naicsname = value of NAICS description
+-- - naicsid = value of NAICS xml
+-- - primary.flag = value of primary.flag
+
+-- - On Load, if naicscode does not exist so needs to add, get latests naicsorder value, add one and make that value of naicsorder.  If primary, make naicsorder = "1"  If no primary, there will not be a naicsorder = "1" , start with naicsorder = "2" for first instance.   
+
+-- No rows are returned
+SELECT * FROM troa_dev.idmap
+WHERE idvalue = '523920'
+
+-- Returns many rows with no data in naicsname (see below)
+SELECT * FROM troa_dev.organization_naics
+where naicsid = '523920'
+and partition = 'Equifax_Domestic'
+
+-- Warning: This will return 0 rows
+SELECT * FROM troa_dev.organization_naics
+where length(naicsname) > 0
+LIMIT 100
+
+-- Warning: This will return 0 rows
+SELECT * FROM troa_dev.archive_organization_naics
+where length(naicsname) > 0
+LIMIT 100
+
+
+
+
+
+
+
+
+
+
+
+
+End of Document 
+v.487.001
+

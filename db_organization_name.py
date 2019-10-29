@@ -21,12 +21,49 @@ import psycopg2
 
 class DbOrganizationName:
 
+    display_log_on_pass = False
+
     # method: DbOrganizationName()
     # brief: This would be the famous constructor
     # param: name - the name of the house you want
     # param: age - the age of the house you want
     def __init__(self):
         logging.debug('Inside: DbOrganizationName::DbOrganizationName()')
+
+    # We will use this to display the return of the test
+    def display_loginfo(self, context, assert_message, file_equifax_id, db_partition, db_idvaluetarget):
+
+        # The context can be pass, fail and what ever. We will use this
+        # content to enable or disable the logging
+
+        if context == 'pass':
+            if self.display_log_on_pass:
+                logging.info("------------------------------------------------------------")
+                logging.info("Test Result")
+                logging.info("Test: PASS")
+                current_datetime = datetime.datetime.today()
+                #logging.info("Test Class: DbOrganizationName")
+                #logging.info("Test Method: validation()")
+                #logging.info("Target Database: troa_dev_archive.organization_name")
+                #logging.info("Report Datetime:  %s", current_datetime)
+                logging.info("File Equifax id: %s", file_equifax_id)
+                logging.info("Db Partition: %s", db_partition)
+                logging.debug("Db id Value Target: %s", db_idvaluetarget)
+                logging.info(assert_message)
+
+        else:
+            logging.info("------------------------------------------------------------")
+            logging.info("Test Result")
+            logging.info("Test: FAIL")
+            current_datetime = datetime.datetime.today()
+            #logging.info("Test Class: DbOrganizationName")
+            #logging.info("Test Method: validation()")
+            #logging.info("Target Database: troa_dev_archive.organization_name")
+            #logging.info("Report Datetime:  %s", current_datetime)
+            logging.info("File Equifax id: %s", file_equifax_id)
+            logging.info("Db Partition: %s", db_partition)
+            logging.debug("Db id Value Target: %s", db_idvaluetarget)
+            logging.info(assert_message)
 
     # method: validation()
     # brief: Validate the data in the row with the database
@@ -38,6 +75,9 @@ class DbOrganizationName:
         file_company_id = row['COMPANY_ID']
         file_canonical_name = row['CANONICAL_NAME']
         file_equifax_id = row['EQUIFAX_ID']
+
+        db_partition = ''
+        db_idvaluetarget = ''
 
         logging.debug('------------------------------------------------------------')
         logging.debug('Inside: DbOrganizationName::validation()')
@@ -62,8 +102,10 @@ class DbOrganizationName:
             partition = 'Equifax_Domestic'
             #name_type = 'Official'
             name_type = 'Doing Business As'
+            #schema = 'troa_dev'
+            schema = 'troa_dev_archive'
 
-            postgreSQL_select_Query = f"SELECT troa_dev.idmap.partition, troa_dev.idmap.idtype, troa_dev.idmap.idvaluetarget, troa_dev.idmap.idvalue, troa_dev.organization_name.troaid, troa_dev.organization_name.name FROM troa_dev.idmap INNER JOIN troa_dev.organization_name ON troa_dev.idmap.idvalue = troa_dev.organization_name.troaid WHERE troa_dev.idmap.idvaluetarget = '{file_equifax_id}' AND troa_dev.idmap.partition = '{partition}' AND troa_dev.organization_name.nametype = '{name_type}'"
+            postgreSQL_select_Query = f"SELECT {schema}.idmap.partition, {schema}.idmap.idtype, {schema}.idmap.idvaluetarget, {schema}.idmap.idvalue, {schema}.organization_name.troaid, {schema}.organization_name.name FROM {schema}.idmap INNER JOIN {schema}.organization_name ON {schema}.idmap.idvalue = {schema}.organization_name.troaid WHERE {schema}.idmap.idvaluetarget = '{file_equifax_id}' AND {schema}.idmap.partition = '{partition}' AND {schema}.organization_name.nametype = '{name_type}'"
 
             # postgreSQL_select_Query2 = f"SELECT * FROM troa_dev.organization_name where partitionid = '{file_partitionid_in}' AND partition = '{partition_In}'"
             logging.debug("SQL string: %s", postgreSQL_select_Query)
@@ -110,7 +152,7 @@ class DbOrganizationName:
                 logging.debug("db_troaid: %s", db_troaid)
                 logging.debug("db_name_in: %s", db_name_in)
 
-            logging.info('Close the database connection')
+            logging.debug('Close the database connection')
             conn.close()
 
         except Exception as err:
@@ -124,49 +166,31 @@ class DbOrganizationName:
         # Now we are going to do he data validation asserts
         # this will be fund !!!
 
-        logging.info("************************")
-        logging.info("** TEST RESULTS ********")
-        logging.info("************************")
-
         if test_dataset:
-
-            current_datetime = datetime.datetime.today()
-            logging.info("Test Class: DbOrganizationName")
-            logging.info("Test Method: validation()")
-            logging.info("Target Database: troa_dev.organization_name")
-            logging.info("Report Datetime:  %s", current_datetime)
-            logging.info("File Equifax id: %s", file_equifax_id)
-            logging.info("Db Partition: %s", db_partition)
-            logging.debug("Db id Value Target: %s", db_idvaluetarget)
 
             # ------------
             try:
                 assert int(file_equifax_id) == int(db_idvaluetarget)
                 assert_message = f"Test Successful - file_equifax_id: {file_equifax_id} is equal to db_idvaluetarget: {db_idvaluetarget}"
-                logging.info(assert_message)
+                self.display_loginfo('pass', assert_message, file_equifax_id, db_partition, db_idvaluetarget)
                 results.add_to_passed()
             except:
                 assert_message = f"Test Failed - file_equifax_id: {file_equifax_id} Not Equal db_idvaluetarget: {db_idvaluetarget}"
-                logging.info(assert_message)
+                self.display_loginfo('fail', assert_message, file_equifax_id, db_partition, db_idvaluetarget)
                 results.add_to_failed()
 
             # ------------
             try:
                 assert file_canonical_name == db_name_in
                 assert_message = f"Test Successful - file_canonical_name: {file_canonical_name} is equal to db_name_in: {db_name_in}"
-                logging.info(assert_message)
+                self.display_loginfo('pass', assert_message, file_equifax_id, db_partition, db_idvaluetarget)
                 results.add_to_passed()
             except:
                 assert_message = f"Test Failed - file_canonical_name: {file_canonical_name} Not Equal db_name_in: {db_name_in}"
-                logging.info(assert_message)
+                self.display_loginfo('fail', assert_message, file_equifax_id, db_partition, db_idvaluetarget)
                 results.add_to_failed()
 
         else:
-            logging.info("No record were found matching the query")
-            current_datetime = datetime.datetime.today()
-            logging.info("Test Class: DbOrganizationName")
-            logging.info("Test Method: validation()")
-            logging.info("Target Database: troa_dev.organization_name")
-            logging.info("Report Datetime:  %s", current_datetime)
-            logging.info("File Equifax id: %s", file_equifax_id)
+            assert_message = "Test Failed - No record were found matching the query"
+            self.display_loginfo('fail', assert_message, file_equifax_id, db_partition, db_idvaluetarget)
             results.add_to_no_data()
